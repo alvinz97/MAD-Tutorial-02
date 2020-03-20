@@ -25,6 +25,7 @@
             android:id="@+id/number01"
             android:layout_width="210dp"
             android:layout_height="40dp"
+            android:textAlignment="center"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="40dp"
             android:inputType="number" />
@@ -51,6 +52,7 @@
             android:id="@+id/number02"
             android:layout_width="210dp"
             android:layout_height="40dp"
+            android:textAlignment="center"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="40dp"
             android:inputType="number" />
@@ -67,8 +69,10 @@
 
 
         <Button
+            android:id="@+id/okBtn"
             android:layout_width="100dp"
             android:text="OK"
+            android:clickable="true"
             android:fontFamily="sans-serif-black"
             android:background="@drawable/btn_shape"
             android:layout_height="50dp"/>
