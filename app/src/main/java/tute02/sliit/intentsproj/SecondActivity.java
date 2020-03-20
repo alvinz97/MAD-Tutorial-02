@@ -41,19 +41,20 @@ public class SecondActivity extends AppCompatActivity {
         String n1 = number01.getText().toString();
         String n2 = number02.getText().toString();
 
-        final int finalNum1 = Integer.parseInt(n1);
-        final int finalNum2 = Integer.parseInt(n1);
+//        final int finalNum1 = Integer.parseInt(n1);
+//        final int finalNum2 = Integer.parseInt(n1);
 
-        addBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+//        addBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                TextView result = (TextView) findViewById(R.id.result);
+//                int finalResult = finalNum1 + finalNum2;
+//                result.setText(finalResult);
+//            }
+//        });
 
-                TextView result = (TextView) findViewById(R.id.result);
-                int finalResult = finalNum1 + finalNum2;
-                result.setText(finalResult);
-            }
-        });
-
+//        Manage back Button
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
