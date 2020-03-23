@@ -15,6 +15,9 @@ public class SecondActivity extends AppCompatActivity {
 
     String takeExtra1;
     String takeExtra2;
+    String n1;
+    String n2;
+    double result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +30,8 @@ public class SecondActivity extends AppCompatActivity {
         Button multyBtn = (Button) findViewById(R.id.multyBtn);
         Button divideBtn = (Button) findViewById(R.id.divideBtn);
 
+        final TextView resultView = (TextView) findViewById(R.id.result);
+
         Intent getIntent = getIntent();
 
         EditText number01 = (EditText) findViewById(R.id.num01);
@@ -38,21 +43,40 @@ public class SecondActivity extends AppCompatActivity {
         number01.setText(takeExtra1);
         number02.setText(takeExtra2);
 
-        String n1 = number01.getText().toString();
-        String n2 = number02.getText().toString();
+        n1 = number01.getText().toString();
+        n2 = number02.getText().toString();
 
-//        final int finalNum1 = Integer.parseInt(n1);
-//        final int finalNum2 = Integer.parseInt(n1);
+        addBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                result = Double.parseDouble(takeExtra1) + Double.parseDouble(takeExtra2);
+                resultView.setText(Double.toString(result));
+            }
+        });
 
-//        addBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                TextView result = (TextView) findViewById(R.id.result);
-//                int finalResult = finalNum1 + finalNum2;
-//                result.setText(finalResult);
-//            }
-//        });
+        minusBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                result = Double.parseDouble(takeExtra1) - Double.parseDouble(takeExtra2);
+                resultView.setText(Double.toString(result));
+            }
+        });
+
+        multyBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                result = Double.parseDouble(takeExtra1) * Double.parseDouble(takeExtra2);
+                resultView.setText(Double.toString(result));
+            }
+        });
+
+        divideBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                result = Double.parseDouble(takeExtra1) / Double.parseDouble(takeExtra2);
+                resultView.setText(Double.toString(result));
+            }
+        });
 
 //        Manage back Button
         backButton.setOnClickListener(new View.OnClickListener() {
